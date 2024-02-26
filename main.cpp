@@ -196,17 +196,12 @@ vector<vector<float>> inversematrix(vector<vector<float>> matrix)
 int main()
 {
   /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-  char s1[] = "[1 2 3, 6 7 0, 0 1 2]";
 
-  // char s1[1000];
-  // cin.getline(s1, 1000);
-  // char operation[2];
-  // cin.getline(operation, 2);
-  // char op = operation[0];
-
-  // char op='D';
-  cout<<fixed;
-  
+   char s1[1000];
+   cin.getline(s1, 1000);
+   char operation[2];
+   cin.getline(operation, 2);
+   char op = operation[0];
 
 
   vector<vector<float>> matrix1 = createMatrix(s1);
@@ -216,19 +211,20 @@ int main()
     return 0;
   }
 
-  printMatrix(inversematrix(matrix1));
-
-  /*
     switch (op)
     {
     case 'T':
       printMatrix(Transpose(matrix1));
       break;
 
-      case 'D':
-     cout<<Determinant(matrix1,matrix1.size());
+    case 'D':
+     cout<<Determinant(matrix1);
+     break;
 
-    }*/
+    case 'I':
+         printMatrix(inversematrix(matrix1));
+    }
 
   return 0;
 }
+
